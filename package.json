@@ -1,0 +1,28 @@
+{
+  "name": "@dxos/replit",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild-server build",
+    "start": "esbuild-server dev --port 5000",
+    "test": "true"
+  },
+  "dependencies": {
+    "@dxos/config": "2.19.6",
+    "@dxos/react-components": "2.19.6",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@dxos/esbuild-plugins": "2.19.6",
+    "@dxos/esbuild-server": "^1.7.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.5.2"
+  }
+}
