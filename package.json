@@ -1,14 +1,17 @@
 {
-  "name": "@dxos/replit",
+  "name": "@dxos/sandbox",
   "version": "1.0.0",
+  "license": "AGPL-3.0",
   "scripts": {
     "build": "esbuild-server build",
     "start": "esbuild-server dev --port 5000",
     "test": "true"
   },
   "dependencies": {
-    "@dxos/config": "2.19.6",
-    "@dxos/react-components": "2.19.6",
+    "@dxos/client": "~2.19.7",
+    "@dxos/config": "~2.19.7",
+    "@dxos/react-client": "~2.19.7",
+    "@dxos/react-components": "~2.19.7",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.1",

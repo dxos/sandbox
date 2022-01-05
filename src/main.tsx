@@ -1,32 +1,64 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { HashIcon } from '@dxos/react-components';
+import { Box, CssBaseline, Link, colors } from '@mui/material';
+
+import { ClientProvider, useClient } from '@dxos/react-client';
+import { DXOS, JsonTreeView } from '@dxos/react-components';
 
 const App = () => {
+  const client = useClient();
+
   return (
-    <div>
-      <header>
-        <HashIcon value='hello' />
+    <Box>
+      <Box 
+        component='header'
+        sx={{
+          backgroundColor: colors.blueGrey[400],
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 'calc(10px + 2vmin)',
+          color: 'white'
+        }}
+      >
+        <DXOS sx={{
+          height: '30vmin',
+          width: '30vmin'
+        }} />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/main.tsx</code> and save to reload.
         </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
+        <Link
+          href="https://dxos.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ color: colors.lightBlue[300] }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Learn DXOS
+        </Link>
+        <Box marginTop={4}>
+          <JsonTreeView
+            data={client.info()}
+          />
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
+const Root = () => (
+  <ClientProvider>
+    <CssBaseline />
+    <App />
+  </ClientProvider>
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );
