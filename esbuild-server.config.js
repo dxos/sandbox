@@ -1,5 +1,5 @@
 const { NodeGlobalsPolyfillPlugin, FixMemdownPlugin, NodeModulesPlugin } = require('@dxos/esbuild-plugins');
-// const { ConfigPlugin } = require('@dxos/config/esbuild-plugin');
+const { ConfigPlugin } = require('@dxos/config/esbuild-plugin');
 
 module.exports = {
   overrides: {
@@ -12,7 +12,7 @@ module.exports = {
     NodeGlobalsPolyfillPlugin(),
     FixMemdownPlugin(),
     NodeModulesPlugin(),
-    // ConfigPlugin()
+    ConfigPlugin()
   ],
   outdir: 'out',
   staticDir: 'public'
