@@ -50,7 +50,7 @@ const App = () => {
   return (
     <>
       <Box sx={{
-        maxWidth: 700,
+        maxWidth: 600,
         minHeight: '40vmin',
         marginX: 'auto',
         marginY: 10,
@@ -67,20 +67,18 @@ const App = () => {
             Parties
           </Typography>
           <Box flex={1} />
-          <IconButton size='small' title='Join party.' onClick={() => setShowRedeem(true)}>
+          <IconButton title='Join party.' onClick={() => setShowRedeem(true)}>
             <RedeemIcon />
           </IconButton>
-          <IconButton size='small' title='Create party.' onClick={() => client.echo.createParty()}>
+          <IconButton title='Create party.' onClick={() => client.echo.createParty()}>
             <AddIcon />
           </IconButton>
         </Box>
 
-        {/* TODO(wittjosiah): Align buttons. */}
-        
         {parties.map(party => (
           <Box key={party.key.toHex()} display='flex'>
             <CopyText value={party.key.toHex()} />
-            <IconButton size='small' title='Share party.' onClick={() => setShareParty(party.key)}>
+            <IconButton title='Share party.' onClick={() => setShareParty(party.key)}>
               <ShareIcon />
             </IconButton>
           </Box>
