@@ -1,5 +1,7 @@
 {
-  "name": "@dxos/sandbox",
+  "name": "dxos-demo",
+  "description": "A demonstration of the basic capabilities of the DXOS platform.",
+  "keywords": [],
   "version": "1.0.0",
   "license": "AGPL-3.0",
   "scripts": {
